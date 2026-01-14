@@ -2,23 +2,27 @@ import { House, Inbox, ReceiptText, SettingsIcon } from "lucide-react";
 
 export const navItems = [
   {
-    title: "Início",
+    title: "Home",
     icon: House,
-    href: "/organization/dashboard",
+    href: "/home",
+    acceptedRoles: ["ADMIN", "MEMBER"],
   },
   {
-    title: "Orçamentos",
+    title: "Estimates",
     icon: ReceiptText,
-    href: "/organization/estimates",
+    href: "/estimates",
+    acceptedRoles: ["ADMIN"],
   },
   {
     title: "Serviços",
     icon: Inbox,
     href: "/organization/projects",
+    acceptedRoles: ["ADMIN", "MEMBER"],
   },
   {
-    title: "Opções",
+    title: "Settings",
     icon: SettingsIcon,
     href: "/organization/settings",
+    acceptedRoles: ["ADMIN", "MEMBER"],
   },
 ];

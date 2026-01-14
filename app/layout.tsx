@@ -14,7 +14,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Rabbit | Contractors",
-  description: "Encontre profissionais qualificados para qualquer serviço que você precise, com avaliações reais e preços transparentes.",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-dark.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  }
 };
 
 export default function RootLayout({

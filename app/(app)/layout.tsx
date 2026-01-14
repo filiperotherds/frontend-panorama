@@ -2,14 +2,9 @@ import { isAuthenticated } from "@/auth/auth";
 import { Header } from "@/components/header";
 import AppSidebar from "@/components/sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 import MobileNavbar from "@/components/mobile-navbar";
-
-export const metadata: Metadata = {
-  title: "Rabbit | Contractors",
-};
 
 export default async function OrgAppLayout({
   children,
