@@ -3,7 +3,7 @@ import { LoginForm } from '@/components/login-form';
 import PostCard from '@/components/post-card';
 import Link from 'next/link';
 
-import jobbleLogo from '@/assets/jobble-professionals.png';
+import logo from '@/assets/panorama-contractors.png'
 
 export default function SignIn() {
 	return (
@@ -12,7 +12,7 @@ export default function SignIn() {
 				<div className='flex justify-center gap-2 md:justify-start'>
 					<Link href='/' className='flex items-center gap-2'>
 						<img
-							src={jobbleLogo.src}
+							src={logo.src}
 							alt='Jobble Professionals'
 							className='w-24'
 						/>

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import jobbleLogo from '@/assets/jobble-professionals.png';
+import logo from '@/assets/panorama-contractors.png'
 import { Separator } from '../ui/separator';
 import { Instagram, Linkedin } from 'lucide-react';
 
@@ -15,7 +15,7 @@ export default function LandingFooter() {
 				<div className='z-10 h-auto flex flex-col items-start justify-start p-8 gap-8 w-full max-w-[1232px] bg-white rounded-lg'>
 					<div className='w-full flex flex-row items-start justify-start gap-8 md:gap-16 text-muted-foreground font-medium'>
 						<Link href='/'>
-							<Image src={jobbleLogo} alt='Jobble' className='w-20' />
+							<Image src={logo} alt='Jobble' className='w-20' />
 						</Link>
 
 						<div className='flex flex-col items-start justify-start space-y-4'>

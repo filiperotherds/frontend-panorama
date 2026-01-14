@@ -51,14 +51,10 @@ export function SolicitationList({ isCompact }: SolicitationListProps) {
               </span>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-theme-secondary rounded-md -translate-x-1 translate-y-1" />
-
-              <div className="relative flex items-center justify-center py-0.5 px-2 bg-theme-primary rounded-md">
-                <span className="text-xs font-medium text-white">
-                  {solicitations.length} novas
-                </span>
-              </div>
+            <div className="relative flex items-center justify-center py-0.5 px-2 bg-notification rounded-md">
+              <span className="text-xs font-medium text-white">
+                {solicitations.length} novas
+              </span>
             </div>
           </div>
         </Link>
@@ -75,14 +71,10 @@ export function SolicitationList({ isCompact }: SolicitationListProps) {
             </span>
           </div>
 
-          <div className="relative">
-            <div className="absolute inset-0 bg-theme-secondary rounded-md -translate-x-1 translate-y-1" />
-
-            <div className="relative flex items-center justify-center py-0.5 px-2 bg-theme-primary rounded-md">
-              <span className="text-xs font-medium text-white">
-                {solicitations.length} novas
-              </span>
-            </div>
+          <div className="relative flex items-center justify-center py-0.5 px-2 bg-notification rounded-md">
+            <span className="text-xs font-medium text-white">
+              {solicitations.length} novas
+            </span>
           </div>
         </div>
 

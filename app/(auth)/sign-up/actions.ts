@@ -37,7 +37,6 @@ export async function signUpAction(data: FormData) {
       name,
       email,
       password,
-      accountType: "INDIVIDUAL",
     });
   } catch (err) {
     if (err instanceof HTTPError) {

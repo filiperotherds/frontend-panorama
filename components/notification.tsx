@@ -30,17 +30,13 @@ export function Notification() {
     <DropdownMenu>
       <DropdownMenuTrigger className="relative cursor-pointer outline-none">
         {hasNotifications ? (
-          <div className="absolute z-20 -top-1 -right-1">
-            <div className="relative h-4 min-w-4 px-1 rounded-full flex items-center justify-center bg-theme-secondary">
-              <span className="text-[10px] font-medium text-white">
-                {notifications.length}
-              </span>
-            </div>
+          <div className="absolute z-20 right-0 top-0">
+            <div className="relative size-1.5 rounded-full flex items-center justify-center bg-notification" />
           </div>
         ) : (
           ""
         )}
-        <div className="size-8 flex items-center justify-center rounded-md bg-secondary hover:bg-secondary/80">
+        <div className="size-7 flex items-center justify-center">
           <BellRing
             className="text-muted-foreground"
             size={16}

@@ -1,12 +1,17 @@
-import { auth, isAuthenticated } from "@/auth/auth";
+import { isAuthenticated } from "@/auth/auth";
+import { Header } from "@/components/header";
+import AppSidebar from "@/components/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
+import MobileNavbar from "@/components/mobile-navbar";
+
 export const metadata: Metadata = {
-  title: "Jobble",
+  title: "Rabbit | Contractors",
 };
 
-export default async function AppLayout({
+export default async function OrgAppLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -15,11 +20,23 @@ export default async function AppLayout({
     redirect("/sign-in");
   }
 
-  const { user } = await auth();
+  return (
+    <div className="w-full bg-secondary font-sans">
+      <div className="w-full h-full">
+        <Header />
 
-  if (user.accountType !== "INDIVIDUAL") {
-    redirect("/home");
-  }
+        <main className="w-full">
+          <div className="w-full h-full p-8 gap-4 items-start justify-start flex flex-col md:flex-row bg-white rounded-t-2xl">
+            <SidebarProvider>
+              <AppSidebar />
 
-  return <div className="">{children}</div>;
+              {/* <SidebarTrigger className="hidden md:flex" /> */}
+              {children}
+            </SidebarProvider>
+          </div>
+          <MobileNavbar />
+        </main>
+      </div>
+    </div>
+  );
 }

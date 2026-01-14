@@ -1,15 +1,7 @@
 import { EstimateCard } from "@/components/estimate-card";
 import { SolicitationList } from "@/components/solicitation-list";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { HandHelping, ReceiptText, ScrollText } from "lucide-react";
+import { ReceiptText, ScrollText } from "lucide-react";
 import Link from "next/link";
 
 export default function Estimates() {

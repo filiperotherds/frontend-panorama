@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
 import MobileNavbar from "@/components/mobile-navbar";
 
 export const metadata: Metadata = {
-  title: "Jobble",
+  title: "Panorama | Contractors",
 };
 
 export default async function OrgAppLayout({
@@ -18,12 +18,6 @@ export default async function OrgAppLayout({
 }>) {
   if (!isAuthenticated()) {
     redirect("/sign-in");
-  }
-
-  const { user } = await auth();
-
-  if (user.accountType !== "ORGANIZATION") {
-    redirect("/home");
   }
 
   return (

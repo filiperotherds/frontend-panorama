@@ -39,6 +39,7 @@
   --color-card: var(--card);
   --color-theme-primary: var(--theme-primary);
   --color-theme-secondary: var(--theme-secondary);
+  --color-notification: var(--notification);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -96,8 +97,9 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
-  --theme-primary: oklch(0.8441 0.1907 148.95);
-  --theme-secondary: oklch(0.4483 0.1208 147.9);
+  --theme-primary: oklch(0.83 0.10 230);
+  --theme-secondary: oklch(0.38 0.14 266);
+  --notification: oklch(0.6484 0.237552 23.7857);
 }
 
 .dark {
@@ -140,5 +142,14 @@
   }
   body {
     @apply bg-secondary text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

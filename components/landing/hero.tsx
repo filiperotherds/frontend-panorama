@@ -3,7 +3,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { Highlighter } from '../ui/highlighter';
 import CtaButton from './cta-button';
-import { Iphone } from '../ui/iphone';
 import Image from 'next/image';
 
 import LpImage from '@/assets/lp-image.png';

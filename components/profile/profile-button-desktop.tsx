@@ -30,20 +30,30 @@ export async function ProfileButtonDesktop() {
             {user.email}
           </span>
         </div>
-        <Avatar>
-          {user.avatarUrl && <AvatarImage src={user.avatarUrl} />}
-          {user.name && (
-            <AvatarFallback>{getInitials(user.name)}</AvatarFallback>
-          )}
-        </Avatar>
+
+        <div className="relative">
+          <div className="absolute inset-0 
+            bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]
+            rounded-full -translate-x-1 translate-y-1" />
+
+          <Avatar>
+            {user.avatarUrl && <AvatarImage src={user.avatarUrl} />}
+            {user.name && (
+              <AvatarFallback className="bg-theme-primary">
+                {getInitials(user.name)}
+              </AvatarFallback>
+            )}
+          </Avatar>
+        </div>
+
         <ChevronDown className="size-4 text-muted-foreground" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" sideOffset={12} className="w-56">
         <DropdownMenuItem asChild>
-          <Link href="/account/settings">
+          <a href="/account/settings">
             <Settings className="mr-2 size-4" />
             Configurações
-          </Link>
+          </a>
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild>

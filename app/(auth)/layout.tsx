@@ -3,9 +3,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Entrar - Jobble",
-  description:
-    "Encontre profissionais qualificados para qualquer serviço que você precise, com avaliações reais e preços transparentes.",
+  title: "Auth - Rabbit",
 };
 
 export default async function RootLayout({
@@ -17,5 +15,5 @@ export default async function RootLayout({
     redirect("/organization/dashboard");
   }
 
-  return <div className="">{children}</div>;
+  return <div className="bg-background">{children}</div>;
 }

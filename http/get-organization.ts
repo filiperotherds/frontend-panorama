@@ -2,7 +2,6 @@ import { api } from "./api-client";
 
 interface GetOrganizationResponse {
     organization: {
-        type: "INDIVIDUAL" | "ORGANIZATION";
         name: string | null;
         avatarUrl: string | null;
     } | null;

@@ -14,25 +14,18 @@ import { useFormState } from "@/hooks/use-form-state";
 import { useRouter } from "next/navigation";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import { AlertTriangle, Loader2 } from "lucide-react";
-import { organizationSignUpAction } from "@/app/(auth)/organization/sign-up/actions";
-
-type signUpType = "INDIVIDUAL" | "ORGANIZATION";
+import { signUpAction } from "@/app/(auth)/sign-up/actions";
 
 export function SignupForm({
-  signUpType,
   className,
   ...props
-}: React.ComponentProps<"form"> & { signUpType?: signUpType }) {
+}: React.ComponentProps<"form">) {
   const router = useRouter();
 
   const [{ errors, message, success }, handleSubmit, isPending] = useFormState(
-    organizationSignUpAction,
+    signUpAction,
     () => {
-      if (signUpType === "ORGANIZATION") {
-        router.push("/complete-signup");
-      } else {
-        router.push("/sign-in");
-      }
+      router.push("/sign-in");
     }
   );
 
@@ -54,9 +47,7 @@ export function SignupForm({
       <FieldGroup>
         <div className="flex flex-col items-center gap-1 text-center">
           <h1 className="text-2xl font-bold">
-            {signUpType === "ORGANIZATION"
-              ? "Torne-se um Parceiro!"
-              : "Crie sua Conta"}
+            Crie sua Conta
           </h1>
           <p className="text-muted-foreground text-sm text-balance">
             Preencha o formulário abaixo para criar sua conta

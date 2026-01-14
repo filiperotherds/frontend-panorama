@@ -20,12 +20,16 @@ export async function ProfileButtonMobile() {
     <Link href={"/user/settings"} className="w-full">
       <div className="w-full flex flex-row items-center justify-between p-2">
         <div className="flex flex-row items-center justify-center gap-3">
-          <Avatar>
-            {user.avatarUrl && <AvatarImage src={user.avatarUrl} />}
-            {user.name && (
-              <AvatarFallback>{getInitials(user.name)}</AvatarFallback>
-            )}
-          </Avatar>
+          <div className="p-[2px] rounded-full bg-[radial-gradient(circle_at_30%_107%,#fdf497_0%,#fdf497_5%,#fd5949_45%,#d6249f_60%,#285AEB_90%)]">
+            <div className="p-[2px] bg-white rounded-full">
+              <Avatar>
+              {user.avatarUrl && <AvatarImage src={user.avatarUrl} />}
+              {user.name && (
+                <AvatarFallback>{getInitials(user.name)}</AvatarFallback>
+              )}
+            </Avatar>
+            </div>
+          </div>
 
           <div className="flex flex-col items-start">
             <span className="text-sm font-medium">{user.name}</span>

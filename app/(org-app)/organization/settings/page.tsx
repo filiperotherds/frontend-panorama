@@ -1,4 +1,4 @@
-import { OrganizationButton } from "@/components/organization-button";
+import { OrganizationButton } from "@/components/organization/organization-button";
 import { PlanCard } from "@/components/plan-card";
 import { ProfileButtonMobile } from "@/components/profile/profile-button-mobile";
 import { Button } from "@/components/ui/button";
