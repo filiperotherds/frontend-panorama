@@ -14,9 +14,9 @@ export const navItems = [
     acceptedRoles: ["ADMIN"],
   },
   {
-    title: "Serviços",
+    title: "Services",
     icon: Inbox,
-    href: "/organization/projects",
+    href: "/projects",
     acceptedRoles: ["ADMIN", "MEMBER"],
   },
   {

@@ -1,4 +1,5 @@
-import { BadgeCheck, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
+import { IconRosetteDiscountCheckFilled } from '@tabler/icons-react';
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Link from "next/link";
 import { getOrganization } from "@/http/get-organization";
@@ -23,7 +24,7 @@ export async function OrganizationButton() {
       <Link href="/create-organization" className="w-full">
         <div className="w-full p-3 flex items-center justify-between outline-none border-l border-b border-border rounded-lg shadow-xs">
           <div className="flex flex-row items-center justify-center gap-3">
-            <BadgeCheck className="size-5 text-blue-500" />
+            <IconRosetteDiscountCheckFilled className="text-blue-500" />
 
             <div className="flex flex-col items-start">
               <span className="text-primary text-sm font-semibold">

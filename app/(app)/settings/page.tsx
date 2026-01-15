@@ -3,14 +3,15 @@ import { ProfileButtonMobile } from "@/components/profile/profile-button-mobile"
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
-import { LogOut, Store, User, Users } from "lucide-react";
+import { IconUsers } from "@tabler/icons-react";
+import { LogOut, Store, User } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
 
 const menuOptions = [
   {
     title: "Organization Members",
-    icon: Users,
+    icon: IconUsers,
     href: "/organization/members",
   },
   {
